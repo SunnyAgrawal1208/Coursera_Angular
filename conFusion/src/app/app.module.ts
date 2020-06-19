@@ -6,6 +6,7 @@ import { MatListModule } from '@angular/material/list';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { AppRoutingModule } from './app-routing/app-routing.module';
 import { AppComponent } from './app.component';
+import { MatSliderModule } from '@angular/material/slider';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
@@ -18,6 +19,7 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatDividerModule } from '@angular/material/divider';
 
 import 'hammerjs';
 import { MenuComponent } from './menu/menu.component';
@@ -47,11 +49,12 @@ import { LoginComponent } from './login/login.component'
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     BrowserAnimationsModule,
     FlexLayoutModule,
     AppRoutingModule,
-    MatGridListModule,
+    MatDividerModule,
+    MatListModule,   
+    MatGridListModule, 
     FormsModule,
     ReactiveFormsModule,
     MatFormFieldModule,
@@ -61,9 +64,9 @@ import { LoginComponent } from './login/login.component'
     MatCardModule,
     MatButtonModule,
     MatToolbarModule,
+    MatSliderModule,
     MatSelectModule,
     MatSlideToggleModule,
-    MatListModule,
     MatDialogModule
   ],
   providers: [
