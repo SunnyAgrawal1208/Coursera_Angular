@@ -8,25 +8,21 @@ import { Dish } from '../shared/dish';
 import { DishService } from '../services/dish.service';
 import { DISHES } from '../shared/dishes';
 import { Comment } from '../shared/comment';
-import { trigger, state, style, animate, transition } from '@angular/animations';
+import { visiblity, flyInOut, expand } from '../animations/app.animation';
 
 @Component({
   selector: 'app-dishdetail',
   templateUrl: './dishdetail.component.html',
   styleUrls: ['./dishdetail.component.scss'],
-  animations: [
-    trigger('visibility', [
-        state('shown', style({
-            transform: 'scale(1.0)',
-            opacity: 1
-        })),
-        state('hidden', style({
-            transform: 'scale(0.5)',
-            opacity: 0
-        })),
-        transition('* => *', animate('0.5s ease-in-out'))
-    ])
-  ]
+  host: {
+    '[@flyInOut]': 'true',
+    'style': 'display: block;'
+    },
+    animations: [
+      flyInOut(),
+      visiblity(),
+      expand()
+    ]
 })
 export class DishdetailComponent implements OnInit {
 
