@@ -21,6 +21,7 @@ import { flyInOut,expand } from '../animations/app.animation';
       expand()
     ]
 })
+
 export class HomeComponent implements OnInit {
 
   dish: Dish;
